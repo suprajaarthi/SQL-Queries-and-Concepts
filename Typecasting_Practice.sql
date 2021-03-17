@@ -25,4 +25,6 @@ select system_type_id, column_id,round(system_type_id*1.00 / column_id,1 )as Cal
 
 select system_type_id, column_id,convert(tinyint,system_type_id*2) as Calculation
 
+select system_type_id, column_id,convert,try_convert(tinyint,system_type_id*2) as Calculation
+
 
