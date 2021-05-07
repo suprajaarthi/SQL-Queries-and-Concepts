@@ -93,7 +93,7 @@ They are set using statements that start with the key words:
 * ALTER SESSION
 * SET ROLE
 * System Control
-* 
+
 In addition to user session properties, there are some properties that can be set dynamically for the entire Oracle Database Instance and these are set with the ALTER SYSTEM statements.
 <hr>
 <h1> Summary </h1>
