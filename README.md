@@ -1,7 +1,7 @@
 # SQL
 
 
-http://tpcg.io/3YWMGiAa
+https://www.tutorialspoint.com/execute_sql_online.php
 
 <h1>Introduction</h1>
 
