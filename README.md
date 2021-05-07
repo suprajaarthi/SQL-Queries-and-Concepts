@@ -22,7 +22,8 @@ The number of RDBMS (and non-RDBMS) systems has grown substantially since 1989 w
 Features within standard have not been implemented in the database software.
 New SQL standard may conflict with prior behavior of vendor’s database.
 Little incentive for vendor to meet a standard which would allow users to switch to competitor.
-Some of the more popular SQL Languages include:
+Some of the more popular SQL Languages include
+
 - T-SQL (Transact-SQL) used by Microsoft SQL Server
 - PL/SQL (Procedural Language / SQL) used by Oracle
 - SPL (Stored Procedural Language) used Teradata
