@@ -53,15 +53,15 @@ Establish auditing options
 Grant and revoke privileges and roles (Considered as DCL statements by some vendors.)
 Some examples of key words that start DDL statements include:
 <hr>
-ALTER (excluding ALTER SESSION or ALTER SYSTEM)
-ANALYZE
-ASSOCIATE STATISTICS
-AUDIT
-CREATE
-DROP
-GRANT
-NOAUDIT
-TRUNCATE (This is a little counter intuitive and often mistaken as a DML statement)
+- ALTER (excluding ALTER SESSION or ALTER SYSTEM)
+- ANALYZE
+- ASSOCIATE STATISTICS
+-AUDIT
+- CREATE
+- DROP
+- GRANT
+- NOAUDIT
+- TRUNCATE (This is a little counter intuitive and often mistaken as a DML statement)
 <h1>Data Manipulation Language (DML) </h1>
 Manipulate data in a database is done using Data Manipulation Language (DML) statements. Oracle also categorizes statements that query data (SELECT) as DML where other vendors might call them Data Query Language (DQL) statements. Some examples of key words that start DML statements include:
 <hr>
