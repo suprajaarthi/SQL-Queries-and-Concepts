@@ -52,7 +52,7 @@ Analyze information on a table, index, or cluster
 Establish auditing options
 Grant and revoke privileges and roles (Considered as DCL statements by some vendors.)
 Some examples of key words that start DDL statements include:
-<hr>
+
 - ALTER (excluding ALTER SESSION or ALTER SYSTEM)
 - ANALYZE
 - ASSOCIATE STATISTICS
