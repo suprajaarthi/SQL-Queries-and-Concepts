@@ -18,17 +18,16 @@ We have been living in what has often been called The Information Age. We have b
 <h1> SQL Versions </h1>
 The number of RDBMS (and non-RDBMS) systems has grown substantially since 1989 when the American National Standards Institute (ANSI) published the ANSI SQL specification and 1992 when the International Organization for Standardization (ISO) adopted the ANSI SQL standards. We will refer to The ANSI SQL specification language standard as “standard SQL” going forward. Just like other languages standard SQL grows and changes over time to conform to new capabilities and available features of databases. If you are interested the ISO/IEC 9075 standard: "Information technology - Database languages - SQL" is publically available at the ANSI webstore. If all vendors would strictly use these standards, then SQL code would be portable between database systems without modifications. The problem is that most vendor SQL implementations are not 100% compatible. Vendors may not completely follow standards for many different reasons including, but not limited to:
 <hr>
-<h1> New features not yet specified within the standard. </h1>
+<h1> Features </h1>
 Features within standard have not been implemented in the database software.
 New SQL standard may conflict with prior behavior of vendor’s database.
 Little incentive for vendor to meet a standard which would allow users to switch to competitor.
 Some of the more popular SQL Languages include:
-<hr>
-T-SQL (Transact-SQL) used by Microsoft SQL Server
-PL/SQL (Procedural Language / SQL) used by Oracle
-SPL (Stored Procedural Language) used Teradata
-PL/pgSQL (Procedural Language/Postgre StructuredSQL) used by PostgreSQL
-The Sub-languages of SQL
+- T-SQL (Transact-SQL) used by Microsoft SQL Server
+- PL/SQL (Procedural Language / SQL) used by Oracle
+- SPL (Stored Procedural Language) used Teradata
+- PL/pgSQL (Procedural Language/Postgre StructuredSQL) used by PostgreSQL
+- The Sub-languages of SQL
 The instructions that are used to communicate with the database using standard SQL fall into different sub-languages. These sub-languages might be referred to differently, depending on the vendor and their own implementation of SQL. The two main categories that you will most often see are:
 - Data Definition Language (DDL)
 - Data Manipulation language (DML)
