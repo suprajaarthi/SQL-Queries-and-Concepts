@@ -31,16 +31,16 @@ PL/pgSQL (Procedural Language/Postgre StructuredSQL) used by PostgreSQL
 The Sub-languages of SQL
 The instructions that are used to communicate with the database using standard SQL fall into different sub-languages. These sub-languages might be referred to differently, depending on the vendor and their own implementation of SQL. The two main categories that you will most often see are:
 <hr>
-Data Definition Language (DDL)
-Data Manipulation language (DML)
-Data Query Language (DQL)
-Data Control Language (DCL)
-Transactional Control Statements
-Session Control Statements
-Database Administration Statements
-Prepared/Procedural/Embedded SQL Statements
-Connection statements
-Dynamic SQL Statements
+- Data Definition Language (DDL)
+- Data Manipulation language (DML)
+- Data Query Language (DQL)
+- Data Control Language (DCL)
+- Transactional Control Statements
+- Session Control Statements
+- Database Administration Statements
+- Prepared/Procedural/Embedded SQL Statements
+- Connection statements
+- Dynamic SQL Statements
 Other categories or sub-languages often depend on how a vendor categorizes them
 The rest of this article will focus on the Oracle SQL language and statement categories.
 <hr>
