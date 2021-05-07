@@ -90,3 +90,4 @@ In addition to user session properties, there are some properties that can be se
 In this guide we have given you a brief history and introduction to SQL. There is a standard for the SQL language but most vendors have their own flavor. If you learn ANSI SQL then you will have the basics need to support any database that does conform at least partially to the ANSI SQL standard. In this day and age where data is becoming a hot commodity learning out to inter act with databases could be a huge step in a career that deals with data stored in databases.
 
 <hr>
+
