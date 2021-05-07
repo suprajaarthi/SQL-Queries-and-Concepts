@@ -64,7 +64,7 @@ Some examples of key words that start DDL statements include:
 - TRUNCATE (This is a little counter intuitive and often mistaken as a DML statement)
 <h1>Data Manipulation Language (DML) </h1>
 Manipulate data in a database is done using Data Manipulation Language (DML) statements. Oracle also categorizes statements that query data (SELECT) as DML where other vendors might call them Data Query Language (DQL) statements. Some examples of key words that start DML statements include:
-<hr>
+
 - CALL
 - DELETE
 - INSERT
