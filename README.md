@@ -6,11 +6,15 @@ https://www.tutorialspoint.com/execute_sql_online.php
 <h1>Introduction</h1>
 
 * We often will use written language to communicate instructions to other people. If a programmer wants a computer to do something, they will develop code in some type of language be it Java, C#, HTML, or something else. If you want to give a database instructions, you can use SQL. Structured Query Language (SQL) is a language that is used to communicate with databases. 
-* It is most often associated with relational database management systems (RDBMS) like Oracle, MySQL, Microsoft SQL Server, PostgreSQL, and DB2 - just to name a few. SQL allows interaction with the database to access its features, create database objects, manage users, manipulate and report on data residing in the database. * There are also many non-relational databases, like H-Store, Hadoop, Cassandra, MongoDB, that often will either be using SQL or SQL-like alternatives to allow communication to the database. Specifically, these databases are referred to as NoSQL (not only SQL) databases.
+
+* It is most often associated with relational database management systems (RDBMS) like Oracle, MySQL, Microsoft SQL Server, PostgreSQL, and DB2 - just to name a few. SQL allows interaction with the database to access its features, create database objects, manage users, manipulate and report on data residing in the database.
+
+* There are also many non-relational databases, like H-Store, Hadoop, Cassandra, MongoDB, that often will either be using SQL or SQL-like alternatives to allow communication to the database. Specifically, these databases are referred to as NoSQL (not only SQL) databases.
 
 
 <hr>
 <h1> Very Brief History</h1>
+
 * In the 1970’s, the IBM Corporation started to create their own relational database. As part of that effort Donald D. Chamberlin and Raymond F. Boyce wrote a paper SEQUEL: A STRUCTURED ENGLISH QUERY LANGUAGE which presented the languaged used to communicate to the relational database. 
 
 * In 1977, to avoid a possible international trademark violation, SEQUEL became SQL which is an acronym for Structured Query Language. This has led to an interesting non-technical argument about SQL and how to pronounce it.
