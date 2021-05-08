@@ -84,7 +84,7 @@ In Oracle DML statements do not automatically save changes. Oracle provides stat
 - SET CONSTRAINT
 - Session Control
 There are properties that a user can set within their own SQL session. 
-<hr>
+
 They are set using statements that start with the key words:
 
 * ALTER SESSION
