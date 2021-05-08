@@ -95,10 +95,9 @@ They are set using statements that start with the key words:
 * System Control
 
 In addition to user session properties, there are some properties that can be set dynamically for the entire Oracle Database Instance and these are set with the ALTER SYSTEM statements.
-<hr>
+
 <h1> Summary </h1>
 * In this guide we have given you a brief history and introduction to SQL. There is a standard for the SQL language but most vendors have their own flavor. If you learn ANSI SQL then you will have the basics need to support any database that does conform at least partially to the ANSI SQL standard. 
 * In this day and age where data is becoming a hot commodity learning out to inter act with databases could be a huge step in a career that deals with data stored in databases.
 
-<hr>
 
