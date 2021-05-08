@@ -12,7 +12,9 @@ https://www.tutorialspoint.com/execute_sql_online.php
 <hr>
 <h1> Very Brief History</h1>
 * In the 1970’s, the IBM Corporation started to create their own relational database. As part of that effort Donald D. Chamberlin and Raymond F. Boyce wrote a paper SEQUEL: A STRUCTURED ENGLISH QUERY LANGUAGE which presented the languaged used to communicate to the relational database. 
+
 * In 1977, to avoid a possible international trademark violation, SEQUEL became SQL which is an acronym for Structured Query Language. This has led to an interesting non-technical argument about SQL and how to pronounce it.
+
 *  Do you pronounce it like the word “sequel” or do you pronounce it by individual letters S-Q-L (“ess-que-ell”)? Really both ways are acceptable, but you will find people out there who will argue about it.
 <h1> Why Should You Learn SQL? </h1>
 * We have been living in what has often been called The Information Age. We have become a knowledge based society. Just think of how many of us look to search engines like Google to find information. This goes further than just personal knowledge. 
