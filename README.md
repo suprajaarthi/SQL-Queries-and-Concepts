@@ -27,7 +27,10 @@ https://www.tutorialspoint.com/execute_sql_online.php
 
 *  According to The Economist, May 2017, data is becoming “the world’s most valuable resource.” The data that companies use is most often stored in databases. There may be fancy frontend GUIs to display it as charts and graphics but the way the program draws out the data is by using SQL.
 <h1> SQL Versions </h1>
-The number of RDBMS (and non-RDBMS) systems has grown substantially since 1989 when the American National Standards Institute (ANSI) published the ANSI SQL specification and 1992 when the International Organization for Standardization (ISO) adopted the ANSI SQL standards. We will refer to The ANSI SQL specification language standard as “standard SQL” going forward. Just like other languages standard SQL grows and changes over time to conform to new capabilities and available features of databases. If you are interested the ISO/IEC 9075 standard: "Information technology - Database languages - SQL" is publically available at the ANSI webstore. If all vendors would strictly use these standards, then SQL code would be portable between database systems without modifications. The problem is that most vendor SQL implementations are not 100% compatible. Vendors may not completely follow standards for many different reasons including, but not limited to:
+
+* The number of RDBMS (and non-RDBMS) systems has grown substantially since 1989 when the American National Standards Institute (ANSI) published the ANSI SQL specification and 1992 when the International Organization for Standardization (ISO) adopted the ANSI SQL standards. We will refer to The ANSI SQL specification language standard as “standard SQL” going forward. 
+
+* Just like other languages standard SQL grows and changes over time to conform to new capabilities and available features of databases. If you are interested the ISO/IEC 9075 standard: "Information technology - Database languages - SQL" is publically available at the ANSI webstore. If all vendors would strictly use these standards, then SQL code would be portable between database systems without modifications. The problem is that most vendor SQL implementations are not 100% compatible.
 <h1> Features </h1>
 Features within standard have not been implemented in the database software.
 New SQL standard may conflict with prior behavior of vendor’s database.
@@ -102,7 +105,9 @@ They are set using statements that start with the key words:
 In addition to user session properties, there are some properties that can be set dynamically for the entire Oracle Database Instance and these are set with the ALTER SYSTEM statements.
 
 <h1> Summary </h1>
+
 * In this guide we have given you a brief history and introduction to SQL. There is a standard for the SQL language but most vendors have their own flavor. If you learn ANSI SQL then you will have the basics need to support any database that does conform at least partially to the ANSI SQL standard. 
+
 * In this day and age where data is becoming a hot commodity learning out to inter act with databases could be a huge step in a career that deals with data stored in databases.
 
 
