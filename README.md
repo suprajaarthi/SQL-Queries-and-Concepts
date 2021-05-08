@@ -21,8 +21,11 @@ https://www.tutorialspoint.com/execute_sql_online.php
 
 *  Do you pronounce it like the word “sequel” or do you pronounce it by individual letters S-Q-L (“ess-que-ell”)? Really both ways are acceptable, but you will find people out there who will argue about it.
 <h1> Why Should You Learn SQL? </h1>
+
 * We have been living in what has often been called The Information Age. We have become a knowledge based society. Just think of how many of us look to search engines like Google to find information. This goes further than just personal knowledge. 
+
 * For example, businesses use information stored from previous sales and trends in their market to forecast sales. There are companies the record a website visitor’s choices and preferences to personalize what is displayed on the website.
+
 *  According to The Economist, May 2017, data is becoming “the world’s most valuable resource.” The data that companies use is most often stored in databases. There may be fancy frontend GUIs to display it as charts and graphics but the way the program draws out the data is by using SQL.
 <h1> SQL Versions </h1>
 The number of RDBMS (and non-RDBMS) systems has grown substantially since 1989 when the American National Standards Institute (ANSI) published the ANSI SQL specification and 1992 when the International Organization for Standardization (ISO) adopted the ANSI SQL standards. We will refer to The ANSI SQL specification language standard as “standard SQL” going forward. Just like other languages standard SQL grows and changes over time to conform to new capabilities and available features of databases. If you are interested the ISO/IEC 9075 standard: "Information technology - Database languages - SQL" is publically available at the ANSI webstore. If all vendors would strictly use these standards, then SQL code would be portable between database systems without modifications. The problem is that most vendor SQL implementations are not 100% compatible. Vendors may not completely follow standards for many different reasons including, but not limited to:
