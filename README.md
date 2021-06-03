@@ -3,6 +3,10 @@
 
 https://www.tutorialspoint.com/execute_sql_online.php
 
+mysql -u root -p 
+
+
+
 <h1>Introduction</h1>
 
 * We often will use written language to communicate instructions to other people. If a programmer wants a computer to do something, they will develop code in some type of language be it Java, C#, HTML, or something else. If you want to give a database instructions, you can use SQL. Structured Query Language (SQL) is a language that is used to communicate with databases. 
