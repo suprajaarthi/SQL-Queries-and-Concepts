@@ -1,0 +1,1062 @@
+Last login: Thu Jun  3 08:54:56 on ttys042
+dilip@FVFDFD14J1WK ~ % mysql user p 
+mysql  Ver 8.0.23 for osx10.16 on x86_64 (Homebrew)
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Usage: mysql [OPTIONS] [database]
+  -?, --help          Display this help and exit.
+  -I, --help          Synonym for -?
+  --auto-rehash       Enable automatic rehashing. One doesn't need to use
+                      'rehash' to get table and field completion, but startup
+                      and reconnecting may take a longer time. Disable with
+                      --disable-auto-rehash.
+                      (Defaults to on; use --skip-auto-rehash to disable.)
+  -A, --no-auto-rehash 
+                      No automatic rehashing. One has to use 'rehash' to get
+                      table and field completion. This gives a quicker start of
+                      mysql and disables rehashing on reconnect.
+  --auto-vertical-output 
+                      Automatically switch to vertical output mode if the
+                      result is wider than the terminal width.
+  -B, --batch         Don't use history file. Disable interactive behavior.
+                      (Enables --silent.)
+  --bind-address=name IP address to bind to.
+  --binary-as-hex     Print binary data as hex. Enabled by default for
+                      interactive terminals.
+  --character-sets-dir=name 
+                      Directory for character set files.
+  --column-type-info  Display column type information.
+  -c, --comments      Preserve comments. Send comments to the server. The
+                      default is --skip-comments (discard comments), enable
+                      with --comments.
+  -C, --compress      Use compression in server/client protocol.
+  -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+  --debug-check       This is a non-debug version. Catch this and exit.
+  -T, --debug-info    This is a non-debug version. Catch this and exit.
+  -D, --database=name Database to use.
+  --default-character-set=name 
+                      Set the default character set.
+  --delimiter=name    Delimiter to be used.
+  --enable-cleartext-plugin 
+                      Enable/disable the clear text authentication plugin.
+  -e, --execute=name  Execute command and quit. (Disables --force and history
+                      file.)
+  -E, --vertical      Print the output of a query (rows) vertically.
+  -f, --force         Continue even if we get an SQL error.
+  --histignore=name   A colon-separated list of patterns to keep statements
+                      from getting logged into syslog and mysql history.
+  -G, --named-commands 
+                      Enable named commands. Named commands mean this program's
+                      internal commands; see mysql> help . When enabled, the
+                      named commands can be used from any line of the query,
+                      otherwise only from the first line, before an enter.
+                      Disable with --disable-named-commands. This option is
+                      disabled by default.
+  -i, --ignore-spaces Ignore space after function names.
+  --init-command=name SQL Command to execute when connecting to MySQL server.
+                      Will automatically be re-executed when reconnecting.
+  --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+  -b, --no-beep       Turn off beep on error.
+  -h, --host=name     Connect to host.
+  --dns-srv-name=name Connect to a DNS SRV resource
+  -H, --html          Produce HTML output.
+  -X, --xml           Produce XML output.
+  --line-numbers      Write line numbers for errors.
+                      (Defaults to on; use --skip-line-numbers to disable.)
+  -L, --skip-line-numbers 
+                      Don't write line number for errors.
+  -n, --unbuffered    Flush buffer after each query.
+  --column-names      Write column names in results.
+                      (Defaults to on; use --skip-column-names to disable.)
+  -N, --skip-column-names 
+                      Don't write column names in results.
+  --sigint-ignore     Ignore SIGINT (CTRL-C).
+  -o, --one-database  Ignore statements except those that occur while the
+                      default database is the one named at the command line.
+  --pager[=name]      Pager to use to display results. If you don't supply an
+                      option, the default pager is taken from your ENV variable
+                      PAGER. Valid pagers are less, more, cat [> filename],
+                      etc. See interactive help (\h) also. This option does not
+                      work in batch mode. Disable with --disable-pager. This
+                      option is disabled by default.
+  -p, --password[=name] 
+                      Password to use when connecting to server. If password is
+                      not given it's asked from the tty.
+  -P, --port=#        Port number to use for connection or 0 for default to, in
+                      order of preference, my.cnf, $MYSQL_TCP_PORT,
+                      /etc/services, built-in default (3306).
+  --prompt=name       Set the mysql prompt to this value.
+  --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+                      memory).
+  -q, --quick         Don't cache result, print it row by row. This may slow
+                      down the server if the output is suspended. Doesn't use
+                      history file.
+  -r, --raw           Write fields without conversion. Used with --batch.
+  --reconnect         Reconnect if the connection is lost. Disable with
+                      --disable-reconnect. This option is enabled by default.
+                      (Defaults to on; use --skip-reconnect to disable.)
+  -s, --silent        Be more silent. Print results with a tab as separator,
+                      each row on new line.
+  -S, --socket=name   The socket file to use for connection.
+  --server-public-key-path=name 
+                      File path to the server public RSA key in PEM format.
+  --get-server-public-key 
+                      Get server public key
+  --ssl-mode=name     SSL connection mode.
+  --ssl-ca=name       CA file in PEM format.
+  --ssl-capath=name   CA directory.
+  --ssl-cert=name     X509 cert in PEM format.
+  --ssl-cipher=name   SSL cipher to use.
+  --ssl-key=name      X509 key in PEM format.
+  --ssl-crl=name      Certificate revocation list.
+  --ssl-crlpath=name  Certificate revocation list path.
+  --tls-version=name  TLS version to use, permitted values are: TLSv1, TLSv1.1,
+                      TLSv1.2, TLSv1.3
+  --ssl-fips-mode=name 
+                      SSL FIPS mode (applies only for OpenSSL); permitted
+                      values are: OFF, ON, STRICT
+  --tls-ciphersuites=name 
+                      TLS v1.3 cipher to use.
+  -t, --table         Output in table format.
+  --tee=name          Append everything into outfile. See interactive help (\h)
+                      also. Does not work in batch mode. Disable with
+                      --disable-tee. This option is disabled by default.
+  -u, --user=name     User for login if not current user.
+  -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+  -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+  -v, --verbose       Write more. (-v -v -v gives the table output format).
+  -V, --version       Output version information and exit.
+  -w, --wait          Wait and retry if connection is down.
+  --connect-timeout=# Number of seconds before connection timeout.
+  --max-allowed-packet=# 
+                      The maximum packet length to send to or receive from
+                      server.
+  --net-buffer-length=# 
+                      The buffer size for TCP/IP and socket communication.
+  --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+  --max-join-size=#   Automatic limit for rows in a join when using
+                      --safe-updates.
+  --show-warnings     Show warnings after every statement.
+  -j, --syslog        Log filtered interactive commands to syslog. Filtering of
+                      commands depends on the patterns supplied via histignore
+                      option besides the default patterns.
+  --plugin-dir=name   Directory for client-side plugins.
+  --default-auth=name Default authentication client-side plugin to use.
+  --binary-mode       By default, ASCII '\0' is disallowed and '\r\n' is
+                      translated to '\n'. This switch turns off both features,
+                      and also turns off parsing of all clientcommands except
+                      \C and DELIMITER, in non-interactive mode (for input
+                      piped to mysql or loaded using the 'source' command).
+                      This is necessary when processing output from mysqlbinlog
+                      that may contain blobs.
+  --connect-expired-password 
+                      Notify the server that this client is prepared to handle
+                      expired password sandbox mode.
+  --compression-algorithms=name 
+                      Use compression algorithm in server/client protocol.
+                      Valid values are any combination of
+                      'zstd','zlib','uncompressed'.
+  --zstd-compression-level=# 
+                      Use this compression level in the client/server protocol,
+                      in case --compression-algorithms=zstd. Valid range is
+                      between 1 and 22, inclusive. Default is 3.
+  --load-data-local-dir=name 
+                      Directory path safe for LOAD DATA LOCAL INFILE to read
+                      from.
+
+Default options are read from the following files in the given order:
+/etc/my.cnf /etc/mysql/my.cnf /usr/local/etc/my.cnf ~/.my.cnf 
+The following groups are read: mysql client
+The following options may be given as the first argument:
+--print-defaults        Print the program argument list and exit.
+--no-defaults           Don't read default options from any option file,
+                        except for login file.
+--defaults-file=#       Only read default options from the given file #.
+--defaults-extra-file=# Read this file after the global files are read.
+--defaults-group-suffix=#
+                        Also read groups with concat(group, suffix)
+--login-path=#          Read this path from the login file.
+
+Variables (--variable-name=value)
+and boolean options {FALSE|TRUE}  Value (after reading options)
+--------------------------------- ----------------------------------------
+auto-rehash                       TRUE
+auto-vertical-output              FALSE
+bind-address                      (No default value)
+binary-as-hex                     FALSE
+character-sets-dir                (No default value)
+column-type-info                  FALSE
+comments                          FALSE
+compress                          FALSE
+database                          (No default value)
+default-character-set             auto
+delimiter                         ;
+enable-cleartext-plugin           FALSE
+vertical                          FALSE
+force                             FALSE
+histignore                        (No default value)
+named-commands                    FALSE
+ignore-spaces                     FALSE
+init-command                      (No default value)
+local-infile                      FALSE
+no-beep                           FALSE
+host                              (No default value)
+dns-srv-name                      (No default value)
+html                              FALSE
+xml                               FALSE
+line-numbers                      TRUE
+unbuffered                        FALSE
+column-names                      TRUE
+sigint-ignore                     FALSE
+port                              0
+prompt                            mysql> 
+quick                             FALSE
+raw                               FALSE
+reconnect                         TRUE
+socket                            (No default value)
+server-public-key-path            (No default value)
+get-server-public-key             FALSE
+ssl-ca                            (No default value)
+ssl-capath                        (No default value)
+ssl-cert                          (No default value)
+ssl-cipher                        (No default value)
+ssl-key                           (No default value)
+ssl-crl                           (No default value)
+ssl-crlpath                       (No default value)
+tls-version                       (No default value)
+tls-ciphersuites                  (No default value)
+table                             FALSE
+user                              (No default value)
+safe-updates                      FALSE
+i-am-a-dummy                      FALSE
+connect-timeout                   0
+max-allowed-packet                16777216
+net-buffer-length                 16384
+select-limit                      1000
+max-join-size                     1000000
+show-warnings                     FALSE
+plugin-dir                        (No default value)
+default-auth                      (No default value)
+binary-mode                       FALSE
+connect-expired-password          FALSE
+compression-algorithms            (No default value)
+zstd-compression-level            3
+load-data-local-dir               (No default value)
+dilip@FVFDFD14J1WK ~ % show databases
+zsh: command not found: show
+dilip@FVFDFD14J1WK ~ % mysql user p mysql --user = root -p 
+mysql  Ver 8.0.23 for osx10.16 on x86_64 (Homebrew)
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Usage: mysql [OPTIONS] [database]
+  -?, --help          Display this help and exit.
+  -I, --help          Synonym for -?
+  --auto-rehash       Enable automatic rehashing. One doesn't need to use
+                      'rehash' to get table and field completion, but startup
+                      and reconnecting may take a longer time. Disable with
+                      --disable-auto-rehash.
+                      (Defaults to on; use --skip-auto-rehash to disable.)
+  -A, --no-auto-rehash 
+                      No automatic rehashing. One has to use 'rehash' to get
+                      table and field completion. This gives a quicker start of
+                      mysql and disables rehashing on reconnect.
+  --auto-vertical-output 
+                      Automatically switch to vertical output mode if the
+                      result is wider than the terminal width.
+  -B, --batch         Don't use history file. Disable interactive behavior.
+                      (Enables --silent.)
+  --bind-address=name IP address to bind to.
+  --binary-as-hex     Print binary data as hex. Enabled by default for
+                      interactive terminals.
+  --character-sets-dir=name 
+                      Directory for character set files.
+  --column-type-info  Display column type information.
+  -c, --comments      Preserve comments. Send comments to the server. The
+                      default is --skip-comments (discard comments), enable
+                      with --comments.
+  -C, --compress      Use compression in server/client protocol.
+  -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+  --debug-check       This is a non-debug version. Catch this and exit.
+  -T, --debug-info    This is a non-debug version. Catch this and exit.
+  -D, --database=name Database to use.
+  --default-character-set=name 
+                      Set the default character set.
+  --delimiter=name    Delimiter to be used.
+  --enable-cleartext-plugin 
+                      Enable/disable the clear text authentication plugin.
+  -e, --execute=name  Execute command and quit. (Disables --force and history
+                      file.)
+  -E, --vertical      Print the output of a query (rows) vertically.
+  -f, --force         Continue even if we get an SQL error.
+  --histignore=name   A colon-separated list of patterns to keep statements
+                      from getting logged into syslog and mysql history.
+  -G, --named-commands 
+                      Enable named commands. Named commands mean this program's
+                      internal commands; see mysql> help . When enabled, the
+                      named commands can be used from any line of the query,
+                      otherwise only from the first line, before an enter.
+                      Disable with --disable-named-commands. This option is
+                      disabled by default.
+  -i, --ignore-spaces Ignore space after function names.
+  --init-command=name SQL Command to execute when connecting to MySQL server.
+                      Will automatically be re-executed when reconnecting.
+  --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+  -b, --no-beep       Turn off beep on error.
+  -h, --host=name     Connect to host.
+  --dns-srv-name=name Connect to a DNS SRV resource
+  -H, --html          Produce HTML output.
+  -X, --xml           Produce XML output.
+  --line-numbers      Write line numbers for errors.
+                      (Defaults to on; use --skip-line-numbers to disable.)
+  -L, --skip-line-numbers 
+                      Don't write line number for errors.
+  -n, --unbuffered    Flush buffer after each query.
+  --column-names      Write column names in results.
+                      (Defaults to on; use --skip-column-names to disable.)
+  -N, --skip-column-names 
+                      Don't write column names in results.
+  --sigint-ignore     Ignore SIGINT (CTRL-C).
+  -o, --one-database  Ignore statements except those that occur while the
+                      default database is the one named at the command line.
+  --pager[=name]      Pager to use to display results. If you don't supply an
+                      option, the default pager is taken from your ENV variable
+                      PAGER. Valid pagers are less, more, cat [> filename],
+                      etc. See interactive help (\h) also. This option does not
+                      work in batch mode. Disable with --disable-pager. This
+                      option is disabled by default.
+  -p, --password[=name] 
+                      Password to use when connecting to server. If password is
+                      not given it's asked from the tty.
+  -P, --port=#        Port number to use for connection or 0 for default to, in
+                      order of preference, my.cnf, $MYSQL_TCP_PORT,
+                      /etc/services, built-in default (3306).
+  --prompt=name       Set the mysql prompt to this value.
+  --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+                      memory).
+  -q, --quick         Don't cache result, print it row by row. This may slow
+                      down the server if the output is suspended. Doesn't use
+                      history file.
+  -r, --raw           Write fields without conversion. Used with --batch.
+  --reconnect         Reconnect if the connection is lost. Disable with
+                      --disable-reconnect. This option is enabled by default.
+                      (Defaults to on; use --skip-reconnect to disable.)
+  -s, --silent        Be more silent. Print results with a tab as separator,
+                      each row on new line.
+  -S, --socket=name   The socket file to use for connection.
+  --server-public-key-path=name 
+                      File path to the server public RSA key in PEM format.
+  --get-server-public-key 
+                      Get server public key
+  --ssl-mode=name     SSL connection mode.
+  --ssl-ca=name       CA file in PEM format.
+  --ssl-capath=name   CA directory.
+  --ssl-cert=name     X509 cert in PEM format.
+  --ssl-cipher=name   SSL cipher to use.
+  --ssl-key=name      X509 key in PEM format.
+  --ssl-crl=name      Certificate revocation list.
+  --ssl-crlpath=name  Certificate revocation list path.
+  --tls-version=name  TLS version to use, permitted values are: TLSv1, TLSv1.1,
+                      TLSv1.2, TLSv1.3
+  --ssl-fips-mode=name 
+                      SSL FIPS mode (applies only for OpenSSL); permitted
+                      values are: OFF, ON, STRICT
+  --tls-ciphersuites=name 
+                      TLS v1.3 cipher to use.
+  -t, --table         Output in table format.
+  --tee=name          Append everything into outfile. See interactive help (\h)
+                      also. Does not work in batch mode. Disable with
+                      --disable-tee. This option is disabled by default.
+  -u, --user=name     User for login if not current user.
+  -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+  -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+  -v, --verbose       Write more. (-v -v -v gives the table output format).
+  -V, --version       Output version information and exit.
+  -w, --wait          Wait and retry if connection is down.
+  --connect-timeout=# Number of seconds before connection timeout.
+  --max-allowed-packet=# 
+                      The maximum packet length to send to or receive from
+                      server.
+  --net-buffer-length=# 
+                      The buffer size for TCP/IP and socket communication.
+  --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+  --max-join-size=#   Automatic limit for rows in a join when using
+                      --safe-updates.
+  --show-warnings     Show warnings after every statement.
+  -j, --syslog        Log filtered interactive commands to syslog. Filtering of
+                      commands depends on the patterns supplied via histignore
+                      option besides the default patterns.
+  --plugin-dir=name   Directory for client-side plugins.
+  --default-auth=name Default authentication client-side plugin to use.
+  --binary-mode       By default, ASCII '\0' is disallowed and '\r\n' is
+                      translated to '\n'. This switch turns off both features,
+                      and also turns off parsing of all clientcommands except
+                      \C and DELIMITER, in non-interactive mode (for input
+                      piped to mysql or loaded using the 'source' command).
+                      This is necessary when processing output from mysqlbinlog
+                      that may contain blobs.
+  --connect-expired-password 
+                      Notify the server that this client is prepared to handle
+                      expired password sandbox mode.
+  --compression-algorithms=name 
+                      Use compression algorithm in server/client protocol.
+                      Valid values are any combination of
+                      'zstd','zlib','uncompressed'.
+  --zstd-compression-level=# 
+                      Use this compression level in the client/server protocol,
+                      in case --compression-algorithms=zstd. Valid range is
+                      between 1 and 22, inclusive. Default is 3.
+  --load-data-local-dir=name 
+                      Directory path safe for LOAD DATA LOCAL INFILE to read
+                      from.
+
+Default options are read from the following files in the given order:
+/etc/my.cnf /etc/mysql/my.cnf /usr/local/etc/my.cnf ~/.my.cnf 
+The following groups are read: mysql client
+The following options may be given as the first argument:
+--print-defaults        Print the program argument list and exit.
+--no-defaults           Don't read default options from any option file,
+                        except for login file.
+--defaults-file=#       Only read default options from the given file #.
+--defaults-extra-file=# Read this file after the global files are read.
+--defaults-group-suffix=#
+                        Also read groups with concat(group, suffix)
+--login-path=#          Read this path from the login file.
+
+Variables (--variable-name=value)
+and boolean options {FALSE|TRUE}  Value (after reading options)
+--------------------------------- ----------------------------------------
+auto-rehash                       TRUE
+auto-vertical-output              FALSE
+bind-address                      (No default value)
+binary-as-hex                     FALSE
+character-sets-dir                (No default value)
+column-type-info                  FALSE
+comments                          FALSE
+compress                          FALSE
+database                          (No default value)
+default-character-set             auto
+delimiter                         ;
+enable-cleartext-plugin           FALSE
+vertical                          FALSE
+force                             FALSE
+histignore                        (No default value)
+named-commands                    FALSE
+ignore-spaces                     FALSE
+init-command                      (No default value)
+local-infile                      FALSE
+no-beep                           FALSE
+host                              (No default value)
+dns-srv-name                      (No default value)
+html                              FALSE
+xml                               FALSE
+line-numbers                      TRUE
+unbuffered                        FALSE
+column-names                      TRUE
+sigint-ignore                     FALSE
+port                              0
+prompt                            mysql> 
+quick                             FALSE
+raw                               FALSE
+reconnect                         TRUE
+socket                            (No default value)
+server-public-key-path            (No default value)
+get-server-public-key             FALSE
+ssl-ca                            (No default value)
+ssl-capath                        (No default value)
+ssl-cert                          (No default value)
+ssl-cipher                        (No default value)
+ssl-key                           (No default value)
+ssl-crl                           (No default value)
+ssl-crlpath                       (No default value)
+tls-version                       (No default value)
+tls-ciphersuites                  (No default value)
+table                             FALSE
+user                              =
+safe-updates                      FALSE
+i-am-a-dummy                      FALSE
+connect-timeout                   0
+max-allowed-packet                16777216
+net-buffer-length                 16384
+select-limit                      1000
+max-join-size                     1000000
+show-warnings                     FALSE
+plugin-dir                        (No default value)
+default-auth                      (No default value)
+binary-mode                       FALSE
+connect-expired-password          FALSE
+compression-algorithms            (No default value)
+zstd-compression-level            3
+load-data-local-dir               (No default value)
+dilip@FVFDFD14J1WK ~ % show databases                      
+zsh: command not found: show
+dilip@FVFDFD14J1WK ~ % mysql user p mysql --user = root -p 
+mysql  Ver 8.0.23 for osx10.16 on x86_64 (Homebrew)
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Usage: mysql [OPTIONS] [database]
+  -?, --help          Display this help and exit.
+  -I, --help          Synonym for -?
+  --auto-rehash       Enable automatic rehashing. One doesn't need to use
+                      'rehash' to get table and field completion, but startup
+                      and reconnecting may take a longer time. Disable with
+                      --disable-auto-rehash.
+                      (Defaults to on; use --skip-auto-rehash to disable.)
+  -A, --no-auto-rehash 
+                      No automatic rehashing. One has to use 'rehash' to get
+                      table and field completion. This gives a quicker start of
+                      mysql and disables rehashing on reconnect.
+  --auto-vertical-output 
+                      Automatically switch to vertical output mode if the
+                      result is wider than the terminal width.
+  -B, --batch         Don't use history file. Disable interactive behavior.
+                      (Enables --silent.)
+  --bind-address=name IP address to bind to.
+  --binary-as-hex     Print binary data as hex. Enabled by default for
+                      interactive terminals.
+  --character-sets-dir=name 
+                      Directory for character set files.
+  --column-type-info  Display column type information.
+  -c, --comments      Preserve comments. Send comments to the server. The
+                      default is --skip-comments (discard comments), enable
+                      with --comments.
+  -C, --compress      Use compression in server/client protocol.
+  -#, --debug[=#]     This is a non-debug version. Catch this and exit.
+  --debug-check       This is a non-debug version. Catch this and exit.
+  -T, --debug-info    This is a non-debug version. Catch this and exit.
+  -D, --database=name Database to use.
+  --default-character-set=name 
+                      Set the default character set.
+  --delimiter=name    Delimiter to be used.
+  --enable-cleartext-plugin 
+                      Enable/disable the clear text authentication plugin.
+  -e, --execute=name  Execute command and quit. (Disables --force and history
+                      file.)
+  -E, --vertical      Print the output of a query (rows) vertically.
+  -f, --force         Continue even if we get an SQL error.
+  --histignore=name   A colon-separated list of patterns to keep statements
+                      from getting logged into syslog and mysql history.
+  -G, --named-commands 
+                      Enable named commands. Named commands mean this program's
+                      internal commands; see mysql> help . When enabled, the
+                      named commands can be used from any line of the query,
+                      otherwise only from the first line, before an enter.
+                      Disable with --disable-named-commands. This option is
+                      disabled by default.
+  -i, --ignore-spaces Ignore space after function names.
+  --init-command=name SQL Command to execute when connecting to MySQL server.
+                      Will automatically be re-executed when reconnecting.
+  --local-infile      Enable/disable LOAD DATA LOCAL INFILE.
+  -b, --no-beep       Turn off beep on error.
+  -h, --host=name     Connect to host.
+  --dns-srv-name=name Connect to a DNS SRV resource
+  -H, --html          Produce HTML output.
+  -X, --xml           Produce XML output.
+  --line-numbers      Write line numbers for errors.
+                      (Defaults to on; use --skip-line-numbers to disable.)
+  -L, --skip-line-numbers 
+                      Don't write line number for errors.
+  -n, --unbuffered    Flush buffer after each query.
+  --column-names      Write column names in results.
+                      (Defaults to on; use --skip-column-names to disable.)
+  -N, --skip-column-names 
+                      Don't write column names in results.
+  --sigint-ignore     Ignore SIGINT (CTRL-C).
+  -o, --one-database  Ignore statements except those that occur while the
+                      default database is the one named at the command line.
+  --pager[=name]      Pager to use to display results. If you don't supply an
+                      option, the default pager is taken from your ENV variable
+                      PAGER. Valid pagers are less, more, cat [> filename],
+                      etc. See interactive help (\h) also. This option does not
+                      work in batch mode. Disable with --disable-pager. This
+                      option is disabled by default.
+  -p, --password[=name] 
+                      Password to use when connecting to server. If password is
+                      not given it's asked from the tty.
+  -P, --port=#        Port number to use for connection or 0 for default to, in
+                      order of preference, my.cnf, $MYSQL_TCP_PORT,
+                      /etc/services, built-in default (3306).
+  --prompt=name       Set the mysql prompt to this value.
+  --protocol=name     The protocol to use for connection (tcp, socket, pipe,
+                      memory).
+  -q, --quick         Don't cache result, print it row by row. This may slow
+                      down the server if the output is suspended. Doesn't use
+                      history file.
+  -r, --raw           Write fields without conversion. Used with --batch.
+  --reconnect         Reconnect if the connection is lost. Disable with
+                      --disable-reconnect. This option is enabled by default.
+                      (Defaults to on; use --skip-reconnect to disable.)
+  -s, --silent        Be more silent. Print results with a tab as separator,
+                      each row on new line.
+  -S, --socket=name   The socket file to use for connection.
+  --server-public-key-path=name 
+                      File path to the server public RSA key in PEM format.
+  --get-server-public-key 
+                      Get server public key
+  --ssl-mode=name     SSL connection mode.
+  --ssl-ca=name       CA file in PEM format.
+  --ssl-capath=name   CA directory.
+  --ssl-cert=name     X509 cert in PEM format.
+  --ssl-cipher=name   SSL cipher to use.
+  --ssl-key=name      X509 key in PEM format.
+  --ssl-crl=name      Certificate revocation list.
+  --ssl-crlpath=name  Certificate revocation list path.
+  --tls-version=name  TLS version to use, permitted values are: TLSv1, TLSv1.1,
+                      TLSv1.2, TLSv1.3
+  --ssl-fips-mode=name 
+                      SSL FIPS mode (applies only for OpenSSL); permitted
+                      values are: OFF, ON, STRICT
+  --tls-ciphersuites=name 
+                      TLS v1.3 cipher to use.
+  -t, --table         Output in table format.
+  --tee=name          Append everything into outfile. See interactive help (\h)
+                      also. Does not work in batch mode. Disable with
+                      --disable-tee. This option is disabled by default.
+  -u, --user=name     User for login if not current user.
+  -U, --safe-updates  Only allow UPDATE and DELETE that uses keys.
+  -U, --i-am-a-dummy  Synonym for option --safe-updates, -U.
+  -v, --verbose       Write more. (-v -v -v gives the table output format).
+  -V, --version       Output version information and exit.
+  -w, --wait          Wait and retry if connection is down.
+  --connect-timeout=# Number of seconds before connection timeout.
+  --max-allowed-packet=# 
+                      The maximum packet length to send to or receive from
+                      server.
+  --net-buffer-length=# 
+                      The buffer size for TCP/IP and socket communication.
+  --select-limit=#    Automatic limit for SELECT when using --safe-updates.
+  --max-join-size=#   Automatic limit for rows in a join when using
+                      --safe-updates.
+  --show-warnings     Show warnings after every statement.
+  -j, --syslog        Log filtered interactive commands to syslog. Filtering of
+                      commands depends on the patterns supplied via histignore
+                      option besides the default patterns.
+  --plugin-dir=name   Directory for client-side plugins.
+  --default-auth=name Default authentication client-side plugin to use.
+  --binary-mode       By default, ASCII '\0' is disallowed and '\r\n' is
+                      translated to '\n'. This switch turns off both features,
+                      and also turns off parsing of all clientcommands except
+                      \C and DELIMITER, in non-interactive mode (for input
+                      piped to mysql or loaded using the 'source' command).
+                      This is necessary when processing output from mysqlbinlog
+                      that may contain blobs.
+  --connect-expired-password 
+                      Notify the server that this client is prepared to handle
+                      expired password sandbox mode.
+  --compression-algorithms=name 
+                      Use compression algorithm in server/client protocol.
+                      Valid values are any combination of
+                      'zstd','zlib','uncompressed'.
+  --zstd-compression-level=# 
+                      Use this compression level in the client/server protocol,
+                      in case --compression-algorithms=zstd. Valid range is
+                      between 1 and 22, inclusive. Default is 3.
+  --load-data-local-dir=name 
+                      Directory path safe for LOAD DATA LOCAL INFILE to read
+                      from.
+
+Default options are read from the following files in the given order:
+/etc/my.cnf /etc/mysql/my.cnf /usr/local/etc/my.cnf ~/.my.cnf 
+The following groups are read: mysql client
+The following options may be given as the first argument:
+--print-defaults        Print the program argument list and exit.
+--no-defaults           Don't read default options from any option file,
+                        except for login file.
+--defaults-file=#       Only read default options from the given file #.
+--defaults-extra-file=# Read this file after the global files are read.
+--defaults-group-suffix=#
+                        Also read groups with concat(group, suffix)
+--login-path=#          Read this path from the login file.
+
+Variables (--variable-name=value)
+and boolean options {FALSE|TRUE}  Value (after reading options)
+--------------------------------- ----------------------------------------
+auto-rehash                       TRUE
+auto-vertical-output              FALSE
+bind-address                      (No default value)
+binary-as-hex                     FALSE
+character-sets-dir                (No default value)
+column-type-info                  FALSE
+comments                          FALSE
+compress                          FALSE
+database                          (No default value)
+default-character-set             auto
+delimiter                         ;
+enable-cleartext-plugin           FALSE
+vertical                          FALSE
+force                             FALSE
+histignore                        (No default value)
+named-commands                    FALSE
+ignore-spaces                     FALSE
+init-command                      (No default value)
+local-infile                      FALSE
+no-beep                           FALSE
+host                              (No default value)
+dns-srv-name                      (No default value)
+html                              FALSE
+xml                               FALSE
+line-numbers                      TRUE
+unbuffered                        FALSE
+column-names                      TRUE
+sigint-ignore                     FALSE
+port                              0
+prompt                            mysql> 
+quick                             FALSE
+raw                               FALSE
+reconnect                         TRUE
+socket                            (No default value)
+server-public-key-path            (No default value)
+get-server-public-key             FALSE
+ssl-ca                            (No default value)
+ssl-capath                        (No default value)
+ssl-cert                          (No default value)
+ssl-cipher                        (No default value)
+ssl-key                           (No default value)
+ssl-crl                           (No default value)
+ssl-crlpath                       (No default value)
+tls-version                       (No default value)
+tls-ciphersuites                  (No default value)
+table                             FALSE
+user                              =
+safe-updates                      FALSE
+i-am-a-dummy                      FALSE
+connect-timeout                   0
+max-allowed-packet                16777216
+net-buffer-length                 16384
+select-limit                      1000
+max-join-size                     1000000
+show-warnings                     FALSE
+plugin-dir                        (No default value)
+default-auth                      (No default value)
+binary-mode                       FALSE
+connect-expired-password          FALSE
+compression-algorithms            (No default value)
+zstd-compression-level            3
+load-data-local-dir               (No default value)
+dilip@FVFDFD14J1WK ~ % create database new 
+zsh: command not found: create
+dilip@FVFDFD14J1WK ~ % mysql --user = root -p  
+Enter password: 
+ERROR 1045 (28000): Access denied for user '='@'localhost' (using password: YES)
+dilip@FVFDFD14J1WK ~ % mysql --user = root -p 
+Enter password: 
+ERROR 1045 (28000): Access denied for user '='@'localhost' (using password: NO)
+dilip@FVFDFD14J1WK ~ % mysql --user = root -p 
+Enter password: 
+ERROR 1045 (28000): Access denied for user '='@'localhost' (using password: YES)
+dilip@FVFDFD14J1WK ~ % mysql -u root      
+
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+dilip@FVFDFD14J1WK ~ % mysql --user = root -p 
+Enter password: 
+ERROR 1045 (28000): Access denied for user '='@'localhost' (using password: YES)
+dilip@FVFDFD14J1WK ~ % mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 8.0.23 Homebrew
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> show databases mysql -u user -p describe EMPLOYEE help show EMPLOYEE describe EMPLOYEE INSERT INTO STUDENTS (ID, NAME, AGE, ADDRESS)   VALUES (5, 'MANMEET', 23, 'JALANDHAR');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'show databases mysql -u user -p describe EMPLOYEE help show EMPLOYEE describe EM' at line 2
+mysql> SHOW DATABASES;
+
++--------------------+
+| Database           |
++--------------------+
+| EMPLOYEE           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.85 sec)
+
+mysql> 
+mysql> USE  DATABASE EMPLOYEE 
+ERROR 1049 (42000): Unknown database 'database'
+mysql> status
+--------------
+mysql  Ver 8.0.23 for osx10.16 on x86_64 (Homebrew)
+
+Connection id:		20
+Current database:	
+Current user:		root@localhost
+SSL:			Not in use
+Current pager:		stdout
+Using outfile:		''
+Using delimiter:	;
+Server version:		8.0.23 Homebrew
+Protocol version:	10
+Connection:		Localhost via UNIX socket
+Server characterset:	utf8mb4
+Db     characterset:	utf8mb4
+Client characterset:	utf8mb4
+Conn.  characterset:	utf8mb4
+UNIX socket:		/tmp/mysql.sock
+Binary data as:		Hexadecimal
+Uptime:			3 days 12 hours 20 min 37 sec
+
+Threads: 2  Questions: 32  Slow queries: 0  Opens: 144  Flush tables: 3  Open tables: 65  Queries per second avg: 0.000
+--------------
+
+mysql> use EMPLOYEE;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> describe employee;
+ERROR 1146 (42S02): Table 'employee.employee' doesn't exist
+mysql> CREATE TABLE Employee  
+    -> (  
+    -> EmployeeID int,  
+    -> FirstName varchar(255),  
+    -> LastName varchar(255),  
+    -> Email varchar(255),  
+    -> AddressLine varchar(255),  
+    -> City varchar(255)  
+    -> );  
+Query OK, 0 rows affected (0.46 sec)
+
+mysql> INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai)
+    -> INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai)
+    -> CREATE TABLE Employee   (   EmployeeID int,   FirstName varchar(255),   LastName varchar(255),   Email varchar(255),   AddressLine varchar(255),   City varchar(255)   );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@a,Pallavaram,Chennai)
+INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,' at line 1
+mysql> select * from Employee
+    -> INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai) INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai) CREATE TABLE Employee   (   EmployeeID int,   FirstName varchar(255),   LastName varchar(255),   Email varchar(255),   AddressLine varchar(255),   City varchar(255)   );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUE' at line 2
+mysql> describe employee;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| EmployeeID  | int          | YES  |     | NULL    |       |
+| FirstName   | varchar(255) | YES  |     | NULL    |       |
+| LastName    | varchar(255) | YES  |     | NULL    |       |
+| Email       | varchar(255) | YES  |     | NULL    |       |
+| AddressLine | varchar(255) | YES  |     | NULL    |       |
+| City        | varchar(255) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.76 sec)
+
+mysql> show Employee
+    -> 
+    -> 
+    -> select * from Employee INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai) INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai) CREATE TABLE Employee   (   EmployeeID int,   FirstName varchar(255),   LastName varchar(255),   Email varchar(255),   AddressLine varchar(255),   City varchar(255)   );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Employee
+
+
+select * from Employee INSERT INTO EMPLOYEE(EmployeeID,FirstName,Last' at line 1
+mysql> show FirstName drom Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FirstName drom Employee' at line 1
+mysql> show FirstName from Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FirstName from Employee' at line 1
+mysql> SHOW FirstName from Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FirstName from Employee' at line 1
+mysql> select FirstName from Employee;
+Empty set (0.02 sec)
+
+mysql> mysql> 
+mysql> INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai)
+    -> INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai)
+    -> INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai)
+    -> INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai)
+    -> SHOW FirstName from Employee;                                          
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@a,Pallavaram,Chennai)
+INSERT INTO EMPLOYEE(EmployeeID,FirstName,LastName,Email,' at line 1
+mysql> SHOW FirstName from Employee;                                            ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FirstName from Employee' at line 1
+mysql> select FirstName from Employee;                                          Empty set (0.00 sec)
+
+mysql> select * from Employee
+    -> SHOW TABLES;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHOW TABLES' at line 2
+mysql> 
+mysql> SHOW TABLES;
++--------------------+
+| Tables_in_employee |
++--------------------+
+| Employee           |
+| STUDENTS           |
++--------------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Employee;
+Empty set (0.00 sec)
+
+mysql> INSERT INTO Employee(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@a,Pallavaram,Chennai)' at line 1
+mysql> SELECT * FROM Employee;
+Empty set (0.00 sec)
+
+mysql> INSERT INTO Employee(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,Supraja,Arthi,a@a,Pallavaram,Chennai);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@a,Pallavaram,Chennai)' at line 1
+mysql> SHOW COLUMS FROM Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COLUMS FROM Employee' at line 1
+mysql> SHOW COLUMNS FROM Employee;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| EmployeeID  | int          | YES  |     | NULL    |       |
+| FirstName   | varchar(255) | YES  |     | NULL    |       |
+| LastName    | varchar(255) | YES  |     | NULL    |       |
+| Email       | varchar(255) | YES  |     | NULL    |       |
+| AddressLine | varchar(255) | YES  |     | NULL    |       |
+| City        | varchar(255) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> INSERT INTO Employee(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,'Supraja','Arthi','a@a','Pallavaram','Chennai');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Employee;
++------------+-----------+----------+-------+-------------+---------+
+| EmployeeID | FirstName | LastName | Email | AddressLine | City    |
++------------+-----------+----------+-------+-------------+---------+
+|          1 | Supraja   | Arthi    | a@a   | Pallavaram  | Chennai |
++------------+-----------+----------+-------+-------------+---------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO Employee(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,'Bat','Man','b@b','Madagascar','US');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO Employee(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,'Iron','Man','b@b','Swiss','Canada');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Employee;
++------------+-----------+----------+-------+-------------+---------+
+| EmployeeID | FirstName | LastName | Email | AddressLine | City    |
++------------+-----------+----------+-------+-------------+---------+
+|          1 | Supraja   | Arthi    | a@a   | Pallavaram  | Chennai |
+|          1 | Bat       | Man      | b@b   | Madagascar  | US      |
+|          1 | Iron      | Man      | b@b   | Swiss       | Canada  |
++------------+-----------+----------+-------+-------------+---------+
+3 rows in set (0.00 sec)
+
+mysql> INSERT INTO Employee(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(1,'Super','Man','s2s','Kwish','Africa');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> INSERT INTO Employee(EmployeeID,FirstName,LastName,Email,AddressLine,City) VALUES(7,'John','','s2s','Kwish','Africa');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Employee;
++------------+-----------+----------+-------+-------------+---------+
+| EmployeeID | FirstName | LastName | Email | AddressLine | City    |
++------------+-----------+----------+-------+-------------+---------+
+|          1 | Supraja   | Arthi    | a@a   | Pallavaram  | Chennai |
+|          1 | Bat       | Man      | b@b   | Madagascar  | US      |
+|          1 | Iron      | Man      | b@b   | Swiss       | Canada  |
+|          1 | Super     | Man      | s2s   | Kwish       | Africa  |
+|          7 | John      |          | s2s   | Kwish       | Africa  |
++------------+-----------+----------+-------+-------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> UPDATE Employee SET email = 'bat@gmail.com' where FirstName='Bat';
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Employee;
++------------+-----------+----------+---------------+-------------+---------+
+| EmployeeID | FirstName | LastName | Email         | AddressLine | City    |
++------------+-----------+----------+---------------+-------------+---------+
+|          1 | Supraja   | Arthi    | a@a           | Pallavaram  | Chennai |
+|          1 | Bat       | Man      | bat@gmail.com | Madagascar  | US      |
+|          1 | Iron      | Man      | b@b           | Swiss       | Canada  |
+|          1 | Super     | Man      | s2s           | Kwish       | Africa  |
+|          7 | John      |          | s2s           | Kwish       | Africa  |
++------------+-----------+----------+---------------+-------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> DELETE FROM Employee WHERE FirstName='Iron';
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Employee;
++------------+-----------+----------+---------------+-------------+---------+
+| EmployeeID | FirstName | LastName | Email         | AddressLine | City    |
++------------+-----------+----------+---------------+-------------+---------+
+|          1 | Supraja   | Arthi    | a@a           | Pallavaram  | Chennai |
+|          1 | Bat       | Man      | bat@gmail.com | Madagascar  | US      |
+|          1 | Super     | Man      | s2s           | Kwish       | Africa  |
+|          7 | John      |          | s2s           | Kwish       | Africa  |
++------------+-----------+----------+---------------+-------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select FirstName from Employee;
++-----------+
+| FirstName |
++-----------+
+| Supraja   |
+| Bat       |
+| Super     |
+| John      |
++-----------+
+4 rows in set (0.00 sec)
+
+mysql> mysql> show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dashow databases' at line 1
+mysql> SHOW databases;
++--------------------+
+| Database           |
++--------------------+
+| EMPLOYEE           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.01 sec)
+
+mysql> show Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Employee' at line 1
+mysql> SHOW Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Employee' at line 1
+mysql> describe employee;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| EmployeeID  | int          | YES  |     | NULL    |       |
+| FirstName   | varchar(255) | YES  |     | NULL    |       |
+| LastName    | varchar(255) | YES  |     | NULL    |       |
+| Email       | varchar(255) | YES  |     | NULL    |       |
+| AddressLine | varchar(255) | YES  |     | NULL    |       |
+| City        | varchar(255) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> mysql> mysql> 
+mysql> describe Employee;
++-------------+--------------+------+-----+---------+-------+
+| Field       | Type         | Null | Key | Default | Extra |
++-------------+--------------+------+-----+---------+-------+
+| EmployeeID  | int          | YES  |     | NULL    |       |
+| FirstName   | varchar(255) | YES  |     | NULL    |       |
+| LastName    | varchar(255) | YES  |     | NULL    |       |
+| Email       | varchar(255) | YES  |     | NULL    |       |
+| AddressLine | varchar(255) | YES  |     | NULL    |       |
+| City        | varchar(255) | YES  |     | NULL    |       |
++-------------+--------------+------+-----+---------+-------+
+6 rows in set (0.02 sec)
+
+mysql> show Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Employee' at line 1
+mysql> SHOW Employee;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Employee' at line 1
+mysql> SHOW databases;
