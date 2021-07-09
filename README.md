@@ -16,7 +16,7 @@ mysql -u root -p
 * There are also many non-relational databases, like H-Store, Hadoop, Cassandra, MongoDB, that often will either be using SQL or SQL-like alternatives to allow communication to the database. Specifically, these databases are referred to as NoSQL (not only SQL) databases.
 
 
-<h1> Very Brief History</h1>
+<h1>Brief History</h1>
 
 * In the 1970’s, the IBM Corporation started to create their own relational database. As part of that effort Donald D. Chamberlin and Raymond F. Boyce wrote a paper SEQUEL: A STRUCTURED ENGLISH QUERY LANGUAGE which presented the languaged used to communicate to the relational database. 
 
