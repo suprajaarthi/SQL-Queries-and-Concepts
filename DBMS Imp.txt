@@ -1,0 +1,49 @@
+What is SQL?
+
+SQL, Structured Query Language, is a programming language designed for working with databases. Some people, however, argue that it is not exactly a programming language since it has not been created with the notion of using features of procedural languages, such as conditional statements or “for” loops. These people insist on calling SQL a coding language because it is only about executing commands for querying, creating, inserting, updating, and deleting data in a database. Nonetheless, the most important thing is to know what the domain of SQL is. 
+
+2. What is a Database? What is a DBMS?
+A database is data stored on a computer and ordered in a way that makes it easy to access and manipulate. a database management system – DBMS is the software tool that allows users to interact with the data stored in the database.
+
+You could conclude by explaining there are two types of database management systems – relational and non-relational. SQL is a language, designed only for working with relational DBMSs.
+
+Such questions are usually asked in the beginning of the interview so that you can start preparing for the difficult ones.
+
+3. What is the difference between DDL, DML, DCL, and TCL?
+
+First of all, let’s explain what there acronyms stand for:
+
+“L” stands for “Language” in all of them. And this must help you remember that these are the four categories in which the SQL commands have been separated into.
+
+DDL stands for Data Definition Language and includes the commands that allow you to CREATE, DROP, ALTER, and TRUNCATE data structures. DML involves commands for manipulating information. It actually means “Data Manipulation Language”, and gives the possibility to SELECT, INSERT, UPDATE, and DELETE data. it is this part of the language you will most use at work, if you are using SQL in the field of data science or business intelligence.
+DCL, Data Control Language, consists of commands that are usually used by database administrators. This one allows programmers to GRANT and REVOKE rights defining how much control you can have over the information in the database.
+
+Similarly, TCL, which is the Transaction Control Language, also includes the commands applied by database administrators. These command ensures that the danger of suffering from data loss is minimal.
+
+4. What is the point of using a foreign key constraint?
+
+The foreign key constraint comprises a set of rules, or limits, that will ensure that the values in the child and parent tables match. Theoretically, the foreign key constraint will maintain the referential integrity within the database.
+
+5. Define and provide an example of using an inner join.
+
+Obviously, you must be aware that joins are one of the most frequently used tools in SQL, regardless of your job role. Particularly if you are working in the sphere of business intelligence, your work will be centred around understanding SQL joins in depth.
+
+So, an SQL join is a tool that allows you to construct a relationship between objects in your database. Consequently, a join shows a result set containing fields derived from two or more tables.
+
+For instance, assume that in one table you have data about the customer ID and fields related to the sales a customer has made, and in the other, you have data about the customer ID and their private information, such as first and last name and email address. Therefore, an inner join allows you to obtain an output containing information from both tables only for the customer IDs found in the two tables that match. Provided that you set the customer ID field to be a matching column, of course.
+
+
+6. What is the difference between MySQL and PostgreSQL? How about between PL/SQL and SQL?
+
+The interviewers ask these questions as they want to find out how much you are acquainted with the fact that SQL has a few versions, each carrying specific features.
+
+You could say that MySQL and PostgreSQL are just two versions of the Structured Query Language. Since you’ve just been asked about joins, you could mention that PostgreSQL supports outer joins, while MySQL doesn’t – you’ll need to use UNION or UNION ALL to emulate an outer join in MySQL. This way you could even impress the interviewers with extra knowledge in this subject.
+
+PL/SQL is not a version of SQL, however, and that’s the tricky part of the question. PL/SQL is a complete procedural programming language and its scope of application is different. It is not strictly related to relational databases.
+
+7. What is an SQL View?
+
+Your potential future employers may want to give a toned-down SQL interview question. That’s why they might ask a general question.
+
+A view is a virtual table whose contents are obtained from an existing table or tables, called base tables. The retrieval happens through an SQL statement, incorporated into the view. In other words, you can think of a view object as a view into the base table. The view itself does not contain any real data; the data is electronically stored in the base table. The view simply shows the data contained in the base table.
+
